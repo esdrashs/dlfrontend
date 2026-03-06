@@ -1,5 +1,6 @@
 import React from 'react';
 import { GlobalProvider } from './context/GlobalContext';
+import { Analytics } from '@vercel/analytics/react';
 import logo from './logo.svg';
 import './App.css';
 import './Components/css/styles.css'; //imports local css
@@ -24,6 +25,7 @@ function App() {
           <Route path="/management" element={<Dashboard />} />
         </Routes>
       </Router>
+      <Analytics />
     </GlobalProvider>
   );
 };
