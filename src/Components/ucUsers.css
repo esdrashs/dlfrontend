@@ -1,0 +1,428 @@
+/* Users Container */
+.users-container {
+  padding: 30px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Header */
+.users-header {
+  margin-bottom: 30px;
+}
+
+.users-title h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.users-title p {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0 0 0;
+}
+
+/* Toolbar */
+.users-toolbar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 14px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #f4623a;
+  box-shadow: 0 0 5px rgba(244, 98, 58, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+/* Filters */
+.filter-group {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-select {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  background: white;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.filter-select:hover {
+  border-color: #f4623a;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #f4623a;
+  box-shadow: 0 0 5px rgba(244, 98, 58, 0.2);
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.btn-export {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-export:hover {
+  border-color: #f4623a;
+  color: #f4623a;
+}
+
+.btn-add-user {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #2c3e50;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add-user:hover {
+  background: #1a252f;
+}
+
+/* Table Wrapper */
+.users-table-wrapper {
+  background: white;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Table */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.users-table thead {
+  background: #2c3e50;
+  color: white;
+}
+
+.users-table thead th {
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  border: none;
+}
+
+.users-table thead th input {
+  cursor: pointer;
+}
+
+.users-table tbody tr {
+  border-bottom: 1px solid #e5e5e5;
+  transition: background 0.3s ease;
+}
+
+.users-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.users-table tbody td {
+  padding: 14px 12px;
+}
+
+/* User Name Cell */
+.user-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  min-width: 80px;
+}
+
+.badge-active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.badge-inactive {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.badge-banned {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.badge-suspended {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.badge-pending {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+/* Actions Cell */
+.actions-cell {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  opacity: 0.7;
+}
+
+.action-btn:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.edit-btn:hover {
+  color: #f4623a;
+}
+
+.delete-btn:hover {
+  color: #dc3545;
+}
+
+/* No Data */
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 40px 12px !important;
+}
+
+/* Loading & Error */
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  color: #666;
+  background: white;
+  border-radius: 8px;
+}
+
+.error {
+  color: #dc3545;
+  background: #f8d7da;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.rows-per-page {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rows-per-page select {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pagination-controls button {
+  min-width: 36px;
+  height: 36px;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  border-color: #f4623a;
+  color: #f4623a;
+  background: #fff9f6;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-controls button.active {
+  background: #2c3e50;
+  color: white;
+  border-color: #2c3e50;
+}
+
+.pagination-controls span {
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .action-buttons {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .users-toolbar {
+    flex-direction: column;
+  }
+
+  .search-box {
+    min-width: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .users-container {
+    padding: 15px;
+  }
+
+  .users-title h1 {
+    font-size: 24px;
+  }
+
+  .users-toolbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filter-group {
+    flex-wrap: wrap;
+  }
+
+  .users-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .users-table {
+    font-size: 12px;
+  }
+
+  .users-table thead th,
+  .users-table tbody td {
+    padding: 10px 8px;
+  }
+
+  .user-name-cell {
+    min-width: 150px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-name-cell span {
+    display: none;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-export,
+  .btn-add-user {
+    width: 100%;
+  }
+
+  .users-table {
+    font-size: 11px;
+  }
+
+  .pagination-controls {
+    flex-wrap: wrap;
+  }
+}
